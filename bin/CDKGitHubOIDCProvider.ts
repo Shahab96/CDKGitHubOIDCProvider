@@ -13,6 +13,4 @@ const provider = new iam.OpenIdConnectProvider(stack, 'GitHubOIDCProvider', {
   clientIds: ['sts.amazonaws.com'],
 });
 
-stack.exportValue(provider.openIdConnectProviderArn, {
-  name: 'GitHubOIDCProviderArn',
-});
+stack.exportValue(provider.openIdConnectProviderArn);
